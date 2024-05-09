@@ -205,7 +205,7 @@ export const lightTheme = createTheme(vars , {
         glow: "0 0 10px rgba(0, 0, 255, 0.3)" /* Glowing effect */,
     },
     backgroundColor: {
-        primary: "#010001",
+        primary: "white",
         surface: "#ADB8BD",
     }
 });

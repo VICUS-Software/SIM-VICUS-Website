@@ -1,21 +1,21 @@
 ---
 import {ThemeProvider} from "@components/theme/Theme_Context";
-import {Theme} from "@components/theme/Theme";
 import {base_layout_style} from "./base_layout.css";
 import Navbar from "../components/navbar/Navbar.astro";
 import Page from "../components/page/Page.astro";
 import Footer from "../components/footer/Footer.astro";
+import {Theme} from "../components/theme/Theme";
 ---
 
 
-<ThemeProvider>
-    <Theme>
+<ThemeProvider client:load>
+    <Theme client:load>
         <div class={base_layout_style}>
             <Navbar/>
             <Page>
                 <slot/>
             </Page>
+            <Footer/>
         </div>
-        <Footer/>
     </Theme>
 </ThemeProvider>

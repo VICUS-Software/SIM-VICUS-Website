@@ -7,8 +7,7 @@ export const black = fontFace(
         fontWeight: "black",
     }
 )
-export const bold = fontFace(
-    {
+export const bold = fontFace( {
         src: "url('./GeistMono-Bold.woff2') format('woff2')",
 
     }

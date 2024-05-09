@@ -1,6 +1,7 @@
 ---
 import {image_wrapper_style, navbar_link_style, navbar_style, navbar_wrapper_style} from "./styles.css";
 import { Image } from 'astro:assets';
+import {ThemeToggle} from "./componenents/ThemeToggle";
 ---
 
 <nav class={navbar_style}>
@@ -29,5 +30,6 @@ import { Image } from 'astro:assets';
     <a class={navbar_link_style}>
         Forum
     </a>
+        <ThemeToggle client:visible />
     </div>
 </nav>

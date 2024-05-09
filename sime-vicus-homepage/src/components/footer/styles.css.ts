@@ -11,6 +11,7 @@ export const footer_container = style({
     borderTopColor: vars.color.borderPrimary,
     borderTopStyle: "solid",
     borderTopWidth: vars.border.borderWidth.thin,
+    paddingTop: "1rem"
 
 })
 

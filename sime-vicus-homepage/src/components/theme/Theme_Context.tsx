@@ -2,12 +2,13 @@ import {
     type ParentComponent,
     type Accessor,
     type Setter,
-    onMount,
+
     createContext,
     createSignal,
-    useContext
+    useContext, Match, Switch, createEffect
 } from "solid-js";
-import {createStore, type SetStoreFunction} from "solid-js/store"
+import {darkTheme, lightTheme} from "@styles/theme.css.ts";
+
 
 type Theme = "light" | "dark";
 
@@ -16,31 +17,17 @@ type ThemeContextType = {
     setTheme: Setter<Theme>
 
 };
-const ThemeContext = createContext<ThemeContextType>();
-// biome-ignore lint/complexity/useArrowFunction: <explanation>
-export const ThemeProvider:ParentComponent = function (props){
-     const [theme,setTheme] = createSignal<Theme>("dark");
-     onMount(()=>{
-        const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+const [theme,setTheme] = createSignal<Theme>("dark");
 
 
-         const stored_theme = localStorage.getItem("theme");
+const ThemeContext = createContext<ThemeContextType|undefined>({
+    theme:theme,
+    setTheme:setTheme
+});
 
+export const ThemeProvider:ParentComponent =  (props) => {
 
-            if(stored_theme) {
-
-                setTheme(stored_theme as Theme);
-            }
-            else {
-                if(darkMode) {
-                    console.log(darkMode)
-                    setTheme("dark")
-                }
-                else {
-                    setTheme("light")
-                }
-            }
-     })
 
     return(
         <ThemeContext.Provider value={
@@ -56,11 +43,11 @@ export const ThemeProvider:ParentComponent = function (props){
 
 export function useTheme(): ThemeContextType {
     const context = useContext(ThemeContext);
+    console.log(context);
     if (!context) {
-        return {
-            theme: () => "dark",
-            setTheme: () => {}
-        }
+        console.log(context)
+
     }
-    return context;
+
+    return context as ThemeContextType;
 }
