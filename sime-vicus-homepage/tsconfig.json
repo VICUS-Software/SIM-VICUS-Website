@@ -3,13 +3,12 @@
   "compilerOptions": {
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@styles/*": ["src/styles/*"],
+        "@styles/*": ["src/styles/*"],
       "@components/*": ["src/components/*"],
       "@utils/*": ["src/utils/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@font/*": ["font/*"]
+      "@layouts/*": ["src/layouts/*"]
     }
   }
 }

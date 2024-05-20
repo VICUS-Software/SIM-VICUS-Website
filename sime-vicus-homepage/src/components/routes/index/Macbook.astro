@@ -1,0 +1,19 @@
+---
+
+import {Image} from "astro:assets";
+import {mac__image, mac__video} from "../../../styles/routes/index/styled.css";
+---
+
+
+<Image alt="macbook" src="/laptop.webp" width="120"
+       class={mac__image}
+       height="240">
+
+
+</Image>
+
+<video class={mac__video} src="/output.webm" autoplay="autoplay"
+       loop
+
+       muted
+/>

@@ -10,6 +10,7 @@ const vars = createThemeContract({
         link: "",
         heading: "",
         borderPrimary: "",
+        secondary:""
     },
     spacing: {
         dynamic: {
@@ -78,7 +79,8 @@ export const darkTheme = createTheme(vars, {
         text: "#FFFFFF",
         heading: "#00B7FF",
         link: "#00B7FF",
-        borderPrimary: "rgb(255, 255, 255,0.5)"
+        borderPrimary: "rgb(255, 255, 255,0.5)",
+        secondary :"#FFB618"
     },
     spacing: {
         dynamic: {
@@ -135,7 +137,7 @@ export const darkTheme = createTheme(vars, {
         glow: "0 0 10px rgba(0, 0, 255, 0.3)" /* Glowing effect */,
     },
     backgroundColor: {
-        primary: "#010001",
+        primary: "black",
         surface: "#ADB8BD",
     }
 
@@ -148,7 +150,8 @@ export const lightTheme = createTheme(vars , {
         text: "#FFFFFF",
         heading: "#00B7FF",
         link: "#00B7FF",
-        borderPrimary: "rgb(255, 255, 255,0.5)"
+        borderPrimary: "rgb(255, 255, 255,0.5)",
+        secondary: ""
     },
     spacing: {
         dynamic: {

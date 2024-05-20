@@ -1,0 +1,20 @@
+---
+import {Image} from "astro:assets"
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Head from "../../components/layout/header/Head.astro";
+
+---
+<Head>
+    <BaseLayout>
+        <h1>
+            SIM-VICUS 1.1 veröffentlicht – DXF Import und weitere spannende Features
+        </h1>
+        <p>Das SIM-VICUS Team wünscht ein spannendes und erfolgreiches neus Jahr! Auch in der SIM-VICUS Welt wird es in diesem Jahr einige Neuerungen geben und deswegen starten wir direkt mit einem umfangreichen Release ins neue Jahr. Neben zahlreichen Bugfixes haben wir an einigen neuen Features gearbeitet: </p>
+
+        <h3>DXF-Import</h3>
+        <p>
+            SIM-VICUS kann nun DXF-Dateien importieren und anzeigen. Anhand dieser ist es möglich schnell und effizient Gebäude, Quartiere und Netze zu modellieren.
+        </p>
+        <Image src={"/new_card_1.webp"}  width="700" height="400" alt="news image"      transition:animate="initial" transition:name={"testImage"}/>
+    </BaseLayout>
+</Head>
