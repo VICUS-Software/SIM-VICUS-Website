@@ -7,6 +7,7 @@ import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 export default defineConfig({
   integrations: [solidJs()],
   site:"https://vicus-software.github.io",
+  base:"SIM-VICUS-Website",
   vite: {
     plugins: [vanillaExtractPlugin()],
   },
