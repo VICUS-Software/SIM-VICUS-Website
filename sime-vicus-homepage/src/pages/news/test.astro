@@ -2,19 +2,44 @@
 import {Image} from "astro:assets"
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Head from "../../components/layout/header/Head.astro";
+import {news_heading, news_text} from "../../styles/routes/news/styles.css";
 
 ---
 <Head>
     <BaseLayout>
-        <h1>
+        <h1 class={news_heading}>
             SIM-VICUS 1.1 veröffentlicht – DXF Import und weitere spannende Features
         </h1>
-        <p>Das SIM-VICUS Team wünscht ein spannendes und erfolgreiches neus Jahr! Auch in der SIM-VICUS Welt wird es in diesem Jahr einige Neuerungen geben und deswegen starten wir direkt mit einem umfangreichen Release ins neue Jahr. Neben zahlreichen Bugfixes haben wir an einigen neuen Features gearbeitet: </p>
+        <p class={news_text}>Das SIM-VICUS Team wünscht ein spannendes und erfolgreiches neus Jahr! Auch in der SIM-VICUS Welt wird es in diesem Jahr einige Neuerungen geben und deswegen starten wir direkt mit einem umfangreichen Release ins neue Jahr. Neben zahlreichen Bugfixes haben wir an einigen neuen Features gearbeitet: </p>
 
-        <h3>DXF-Import</h3>
-        <p>
+        <h2 class={news_heading}>
+            DXF-Import</h2>
+        <p class={news_text}>
             SIM-VICUS kann nun DXF-Dateien importieren und anzeigen. Anhand dieser ist es möglich schnell und effizient Gebäude, Quartiere und Netze zu modellieren.
         </p>
-        <Image src={"/new_card_1.webp"}  width="700" height="400" alt="news image"      transition:animate="initial" transition:name={"testImage"}/>
+        <Image src={"/new_card_1.webp"}  width="700" height="400" alt="news image"  transition:name="img-news"    />
+
+        <h2 class={news_heading}>
+            Neuer Simulationsview
+        </h2>
+        <p class={news_text}>
+            SIM-VICUS hat einen neuen und einfachen Simulationsview bekommen, in dem alle Einstellungen für Simulationen durchgeführt werden können. So gehen Einstellungen noch schneller und übersichtlicher von der Hand.
+        </p>
+        <h2 class={news_heading}> Verbesserte Wärmenetze</h2>
+        <p class={news_text}>
+            In SIM-VICUS kann nun die Gleichzeitigkeit  mit vordefinierten oder eigenen Funktionen für die Dimensionierung berücksichtigt werden. Durch die implementierte Snapfunktion, lassen sich Netze nun einfacher händisch bearbeiten. Außerdem wurde der GIS-Import verbessert, so dass zusätzliche Eigenschaften importiert werden und Fehler besser erkannt werden.
+        </p>
+        <h2 class={news_heading}>
+            Neuer Look mit schicken Icons
+        </h2>
+        <p class={news_text}>
+            Auch beim Design von SIM-VICUS hat sich einiges getan. Neben vielen Vereinfachungen und Überarbeitungen am Stil der UI gibt es nun neue Icons mit modernem, einheitlichem Stil!
+        </p>
+        <h2 class={news_heading}>
+            Klimadaten Konverter für Messdaten
+        </h2>
+        <p class={news_text}>
+            Ebenso gibt es einen Neuankömmling: den DWD-Klimadatenkonverter. Mit diesem kann aus Messdaten des Deutschen Wetterdienstes (DWD) mit wenig Aufwand eine Klimadatei erzeugt werden. Damit sind Messdaten noch einfacher für Simulationen verwendbar!
+        </p>
     </BaseLayout>
 </Head>

@@ -9,27 +9,51 @@ import {vars} from "../../theme.css.ts";
       backgroundColor: "transparent",
       fill: vars.backgroundColor.primary,
       position:"absolute",
-      top:142,
-      left:520,
+      top:292,
+      left:0,
       zIndex:9,
-      maxHeight:"80%"
+      maxHeight:"80%",
+
+      "@media":{
+
+          'screen and (min-width: 768px)': {
+
+          },
+          'screen and (min-width: 1024px)': {
+
+              top:142,
+              left:520,
+          },
+      }
 
   })
 
 export const mac__video = style({
         display:"block",
-    width:  "98%",
+    width:  "100%",
     maxWidth:"1229px",
     unicodeBidi:"isolate",
     height: "100%",
     position:"absolute",
-    top:79,
+    top:135,
     zIndex:8,
     borderTopRightRadius:"25px",
     borderTopLeftRadius:"25px",
-    left:570,
+    left:33,
     backgroundColor:"transparent",
-    transform :"rotate(-8deg) skew(-8deg) scale(.42,.520) translate(30%,-38.5%)"
+    transform :"rotate(-8deg) skew(-8deg) scale(.42,.520) translate(30%,-38.5%)",
+
+    "@media":{
+
+        'screen and (min-width: 768px)': {
+
+        },
+        'screen and (min-width: 1024px)': {
+
+            top:79,
+            left:570,
+        },
+    }
 })
 
 
@@ -38,9 +62,19 @@ export const stone_wall = style({
     height:"90%",
     overflowClipMargin:"content-box",
     overflow:"clip",
-     width:"100%",
+     width:"40%",
     aspectRatio:"auto 2560 / 1199",
     backgroundColor:"transparent",
+    "@media":{
+
+        'screen and (min-width: 768px)': {
+
+        },
+        'screen and (min-width: 1024px)': {
+
+            width:"100%",
+        },
+    }
 
 })
 export const stone_space = style({

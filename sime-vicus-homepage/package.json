@@ -1,6 +1,7 @@
 {
   "name": "sime-vicus-homepage",
   "type": "module",
+  "homepage": "https://sime-vicus-homepage.github.io",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
@@ -16,13 +17,13 @@
     "@macaron-css/core": "^1.5.2",
     "@macaron-css/solid": "^1.5.3",
     "@macaron-css/vite": "^1.5.1",
-    "@vanilla-extract/css": "^1.15.1",
-    "astro": "^4.8.5",
+    "@vanilla-extract/css": "^1.15.2",
+    "astro": "^4.8.7",
     "solid-js": "^1.8.17",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.2",
-    "@vanilla-extract/vite-plugin": "^4.0.9"
+    "@vanilla-extract/vite-plugin": "^4.0.10"
   }
 }

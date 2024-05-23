@@ -36,7 +36,38 @@
         <chat>
           <internalId value="ec9c9741-77e2-4e9f-83f3-503e539c6e34" />
         </chat>
+        <chat>
+          <internalId value="afae2335-ab89-43b0-b972-8d0146e948dd" />
+        </chat>
+        <chat>
+          <internalId value="19cd1b9b-d6f7-4990-bcee-2c63a1f51139" />
+        </chat>
+        <chat>
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/vicus-software/sim-vicus-website" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="0e576cc3-6775-4f57-876d-b1297e13d4fc" />
+        </chat>
       </list>
     </chats>
+    <defaultEnhancedContext>
+      <enhancedContext>
+        <remoteRepositories>
+          <list>
+            <remoteRepository>
+              <codebaseName value="github.com/vicus-software/sim-vicus-website" />
+            </remoteRepository>
+          </list>
+        </remoteRepositories>
+      </enhancedContext>
+    </defaultEnhancedContext>
   </component>
 </project>

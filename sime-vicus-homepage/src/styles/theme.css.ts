@@ -75,7 +75,7 @@ const vars = createThemeContract({
 export const darkTheme = createTheme(vars, {
     color: {
         primary: "#FFFFFF",
-        surface: "#0A005A",
+        surface: "#575366",
         text: "#FFFFFF",
         heading: "#00B7FF",
         link: "#00B7FF",

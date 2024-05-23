@@ -6,9 +6,11 @@ export const card_container = style({
     display:"grid",
     gridTemplateAreas:`"image" "title""date""description"`,
     gridTemplateRows:"2fr,1fr,1fr,2fr",
+    backgroundColor:"#101010",
     width:"100%",
-    maxWidth:"299px",
-    border:`0.5px solid ${vars.color.borderPrimary}`,
+    maxWidth:"399px",
+
+    borderRadius:vars.border.borderRadius.smooth.medium,
     boxShadow:`1px solid ${vars.color.secondary}`,
     ":hover":{
         border:`1px solid ${vars.color.secondary}`,
@@ -51,6 +53,7 @@ export const card_description = style({
 export const card_image_ = style({
     width:"100%",
     height:"100%",
+    borderRadius:vars.border.borderRadius.smooth.medium,
 
 })
 
