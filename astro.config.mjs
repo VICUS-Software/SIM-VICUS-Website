@@ -9,7 +9,7 @@ const isGithubpages= import.meta.env.GITHUBPAGES |process.env.GITHUBPAGES;
 export default defineConfig({
   integrations: [solidJs()],
   site:"https://vicus-software.github.io",
-  base:isGithubpages ? "SIM-VICUS-Website":"",
+  base: "SIM-VICUS-Website",
   vite: {
     plugins: [vanillaExtractPlugin()],
   },
