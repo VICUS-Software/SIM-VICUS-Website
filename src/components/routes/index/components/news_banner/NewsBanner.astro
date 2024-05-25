@@ -2,6 +2,7 @@
 import {card_wrapper, heading} from "./styles.css";
 import NewsCard from "./components/card/NewsCard.astro";
 import {Image} from "astro:assets"
+import {githubPagesLinkHelper} from "../../../../../utils/githubPagesLinkHelper";
 
 ---
 
@@ -10,7 +11,7 @@ import {Image} from "astro:assets"
 </h1>
 
  <div class={card_wrapper}>
-     <NewsCard imageUrl="/new_card_1.webp" >
+     <NewsCard imageUrl={githubPagesLinkHelper("news/new_card_1.webp")}  >
          <h4 slot="title">
              SIM-VICUS 1.1 veröffentlicht – DXF Import und weitere spannende Features
          </h4>
@@ -22,7 +23,6 @@ import {Image} from "astro:assets"
              Das SIM-VICUS Team wünscht ein spannendes und erfolgreiches neus Jahr! Auch in der SIM-VICUS Welt wird es in diesem Jahr…
          </p>
      </NewsCard>
-
 
 
  </div>

@@ -2,6 +2,9 @@
 import {image_wrapper_style, navbar_link_style, navbar_style, navbar_wrapper_style} from "./styles.css";
 import { Image } from 'astro:assets';
 import {ThemeToggle} from "./componenents/ThemeToggle";
+import {NavbarLinks} from "./page/links";
+
+
 ---
 
 <nav class={navbar_style}>
@@ -9,27 +12,16 @@ import {ThemeToggle} from "./componenents/ThemeToggle";
     <Image src="/simvicus_logo_website.webp" alt="Logo" width="150" height="50" />
     </div>
     <div class={navbar_wrapper_style}>
-    <a class={navbar_link_style} href="/">
-        Home
-    </a>
-    <a class={navbar_link_style}>
-        News
-    </a>
-    <a class={navbar_link_style}>
-        Features
-    </a>
-    <a class={navbar_link_style}>
-        Schulungen
-    </a>
-    <a class={navbar_link_style}>
-        Team
-    </a>
-    <a class={navbar_link_style}>
-        Support und Lizenzen
-    </a>
-    <a class={navbar_link_style}>
-        Forum
-    </a>
+        {
+            NavbarLinks.map((link) =>
+
+                <a class={navbar_link_style} href={link.href}>
+                    {link.name}
+                </a>
+
+            )
+        }
+
         <ThemeToggle client:visible />
     </div>
 </nav>

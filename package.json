@@ -4,9 +4,10 @@
   "homepage": "https://sime-vicus-homepage.github.io",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": " GITHUBPAGES=false astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "GITHUBPAGES=false astro build",
+    "build:github_pages": "GITHUBPAGES=true astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
