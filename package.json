@@ -6,8 +6,7 @@
   "scripts": {
     "dev": " GITHUBPAGES=false astro dev",
     "start": "astro dev",
-    "build": "GITHUBPAGES=false astro build",
-    "build:github_pages": "GITHUBPAGES=true astro build",
+    "build": "GITHUBPAGES=true astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
