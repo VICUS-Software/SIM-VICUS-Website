@@ -2,6 +2,7 @@
 
 import {Image} from "astro:assets";
 import {mac__image, mac__video} from "../../../styles/routes/index/styled.css";
+import {githubPagesLinkHelper} from "../../../utils/githubPagesLinkHelper";
 ---
 
 
@@ -12,7 +13,7 @@ import {mac__image, mac__video} from "../../../styles/routes/index/styled.css";
 
 </Image>
 
-<video class={mac__video} src="/output.webm" autoplay="autoplay"
+<video class={mac__video} src={githubPagesLinkHelper("/output.webm")} autoplay="autoplay"
        loop
 
        muted
