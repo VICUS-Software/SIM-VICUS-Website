@@ -3,6 +3,7 @@ import {Image} from "astro:assets"
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Head from "../../components/layout/header/Head.astro";
 import {news_heading, news_text} from "../../styles/routes/news/styles.css";
+import {githubPagesLinkHelper} from "../../utils/githubPagesLinkHelper";
 
 ---
 <Head>
@@ -17,7 +18,7 @@ import {news_heading, news_text} from "../../styles/routes/news/styles.css";
         <p class={news_text}>
             SIM-VICUS kann nun DXF-Dateien importieren und anzeigen. Anhand dieser ist es möglich schnell und effizient Gebäude, Quartiere und Netze zu modellieren.
         </p>
-        <Image src={"/new_card_1.webp"}  width="700" height="400" alt="news image"  transition:name="img-news"    />
+        <Image src={githubPagesLinkHelper("news/new_card_1.webp")}  width="700" height="400" alt="news image"  transition:name="imgNews" transition:animate="initial"    />
 
         <h2 class={news_heading}>
             Neuer Simulationsview
@@ -25,21 +26,27 @@ import {news_heading, news_text} from "../../styles/routes/news/styles.css";
         <p class={news_text}>
             SIM-VICUS hat einen neuen und einfachen Simulationsview bekommen, in dem alle Einstellungen für Simulationen durchgeführt werden können. So gehen Einstellungen noch schneller und übersichtlicher von der Hand.
         </p>
+        <Image src={githubPagesLinkHelper("news/simulation_view.png")}  width="700" height="400" alt="news image"  />
         <h2 class={news_heading}> Verbesserte Wärmenetze</h2>
         <p class={news_text}>
             In SIM-VICUS kann nun die Gleichzeitigkeit  mit vordefinierten oder eigenen Funktionen für die Dimensionierung berücksichtigt werden. Durch die implementierte Snapfunktion, lassen sich Netze nun einfacher händisch bearbeiten. Außerdem wurde der GIS-Import verbessert, so dass zusätzliche Eigenschaften importiert werden und Fehler besser erkannt werden.
         </p>
+        <Image src={githubPagesLinkHelper("news/heat_net.png")}  width="700" height="400" alt="news image"  />
         <h2 class={news_heading}>
             Neuer Look mit schicken Icons
         </h2>
         <p class={news_text}>
             Auch beim Design von SIM-VICUS hat sich einiges getan. Neben vielen Vereinfachungen und Überarbeitungen am Stil der UI gibt es nun neue Icons mit modernem, einheitlichem Stil!
         </p>
+        <Image src={githubPagesLinkHelper("news/new_icons.webp")}  width="700" height="400" alt="news image"  />
         <h2 class={news_heading}>
             Klimadaten Konverter für Messdaten
         </h2>
         <p class={news_text}>
             Ebenso gibt es einen Neuankömmling: den DWD-Klimadatenkonverter. Mit diesem kann aus Messdaten des Deutschen Wetterdienstes (DWD) mit wenig Aufwand eine Klimadatei erzeugt werden. Damit sind Messdaten noch einfacher für Simulationen verwendbar!
         </p>
+        <Image src={githubPagesLinkHelper("news/measure_data.webp")}  width="700" height="400" alt="news image"  />
+
+
     </BaseLayout>
 </Head>
