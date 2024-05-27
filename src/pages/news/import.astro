@@ -6,7 +6,12 @@ import {news_heading, news_text} from "../../styles/routes/news/styles.css";
 import {githubPagesLinkHelper} from "../../utils/githubPagesLinkHelper";
 
 ---
-<Head>
+<Head
+title="SIM-VICUS 1.1 veröffentlicht – DXF Import und weitere spannende Features"
+date="19. JANUAR 2024"
+description=" Das SIM-VICUS Team wünscht ein spannendes und erfolgreiches neus Jahr! Auch in der SIM-VICUS Welt wird es in diesem Jahr…"
+imageUrl="news/new_card_1.webp"
+>
     <BaseLayout>
         <h1 class={news_heading}>
             SIM-VICUS 1.1 veröffentlicht – DXF Import und weitere spannende Features
@@ -18,6 +23,7 @@ import {githubPagesLinkHelper} from "../../utils/githubPagesLinkHelper";
         <p class={news_text}>
             SIM-VICUS kann nun DXF-Dateien importieren und anzeigen. Anhand dieser ist es möglich schnell und effizient Gebäude, Quartiere und Netze zu modellieren.
         </p>
+
         <Image src={githubPagesLinkHelper("news/new_card_1.webp")}  width="700" height="400" alt="news image"  transition:name="imgNews" transition:animate="initial"    />
 
         <h2 class={news_heading}>
@@ -46,7 +52,5 @@ import {githubPagesLinkHelper} from "../../utils/githubPagesLinkHelper";
             Ebenso gibt es einen Neuankömmling: den DWD-Klimadatenkonverter. Mit diesem kann aus Messdaten des Deutschen Wetterdienstes (DWD) mit wenig Aufwand eine Klimadatei erzeugt werden. Damit sind Messdaten noch einfacher für Simulationen verwendbar!
         </p>
         <Image src={githubPagesLinkHelper("news/measure_data.webp")}  width="700" height="400" alt="news image"  />
-
-
     </BaseLayout>
 </Head>

@@ -9,15 +9,16 @@ import {
     card_title
 } from "./styles.css";
 import {Image} from "astro:assets"
-const {imageUrl} = Astro.props
+import {githubPagesLinkHelper} from "../../../../../../../utils/githubPagesLinkHelper";
+const {imageUrl,href} = Astro.props
 
 ---
 
 
-<a class={blank_link} href="/news/test">
+<a class={blank_link} href={githubPagesLinkHelper(href)}>
 <div class={card_container}>
 <div class={card_image}>
-<Image src={imageUrl} class={card_image_} width="100%" height="100%" alt="news image"  transition:name="imgNews"/>
+<Image src={githubPagesLinkHelper(imageUrl)} class={card_image_} width="100%" height="100%" alt="news image"  transition:name="imgNews"/>
 </div>
     <div class={card_title}>
         <slot name="title"

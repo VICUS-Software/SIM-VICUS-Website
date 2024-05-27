@@ -21,7 +21,8 @@ export const card_container = style({
 })
 
 export const card_image = style({
-    gridArea:"image"
+    gridArea:"image",
+    maxHeight:"200px",
 })
 
 export const card_title = style({
@@ -53,6 +54,7 @@ export const card_description = style({
 export const card_image_ = style({
     width:"100%",
     height:"100%",
+
     borderRadius:vars.border.borderRadius.smooth.medium,
 
 })

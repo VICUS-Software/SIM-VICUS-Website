@@ -138,7 +138,7 @@ export const darkTheme = createTheme(vars, {
     },
     backgroundColor: {
         primary: "black",
-        surface: "#ADB8BD",
+        surface: "rgb(54, 62, 68,0.3)",
     }
 
 });
