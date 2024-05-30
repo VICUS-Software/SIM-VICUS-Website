@@ -9,15 +9,8 @@ export const card_container = style({
     backgroundColor:"#101010",
     width:"100%",
     maxWidth:"399px",
-
     borderRadius:vars.border.borderRadius.smooth.medium,
     boxShadow:`1px solid ${vars.color.secondary}`,
-    ":hover":{
-        border:`1px solid ${vars.color.secondary}`,
-        cursor:"pointer",
-        animation:"ease-out 0.2s"
-    }
-
 })
 
 export const card_image = style({

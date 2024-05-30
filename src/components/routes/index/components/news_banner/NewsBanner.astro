@@ -3,6 +3,7 @@ import {card_wrapper, heading} from "./styles.css";
 import NewsCard from "./components/card/NewsCard.astro";
 import {Image} from "astro:assets"
 import {githubPagesLinkHelper} from "../../../../../utils/githubPagesLinkHelper";
+import {card, cardBackground, cardCategory, cardContent, cardGrid, cardHeading} from "./cards.css";
 
 export async function getStaticPaths({ paginate }) {
     const allPosts = await Astro.glob('../../../../../pages/news/*.astro');
@@ -94,6 +95,52 @@ console.log(pages,"allpost")
          Am 27.01.2023 haben wir SIM-VICUS im Rahmen der Veranstaltung “Software & Tools für Fernwärmeanwendungen” des Verbands für Kraft-Wärme-Kopplung, (Fern)Wärme und…
      </p>
      </NewsCard>
+     <div class={cardGrid}>
+         <a class={card} href="#">
+             <div class={cardBackground} style="background-image: url(/news/building_the_energy_turnaround/card.webp)"></div>
+             <div class={cardContent}>
+
+                 <div style={{
+                     display:"flex",
+                     flexDirection:"row",
+                     placeContent:"space-between",
+                     gap:"1rem"
+                 }} >
+                 <p class={cardCategory}>Schulung</p>
+                     <p class={cardCategory}> 19. JANUAR 2024</p>
+                 </div>
+                 <h3 class={cardHeading}>Gebäudesimulation Energiewende Bauen</h3>
+                 <p
+                         class={cardCategory}
+                 >
+                     Interessierte können kostenlos und digital an der SIM-VICUS Schulung auf der Energiewende Bauen teilnehmen. Ort: Virtuell Zeit: 26.04.23 von 14:00…
+                 </p>
+             </div>
+         </a>
+         <a class={card} href="#">
+             <div class={cardBackground} style="background-image: url(/news/import/card.webp)"></div>
+             <div class={cardContent}>
+                 <div style={{
+                     display:"flex",
+                     flexDirection:"row",
+                     placeContent:"space-between",
+                     gap:"1rem"
+                 }} >
+                 <p class={cardCategory}>Softwareupdate</p>
+                     <p
+                             class={cardCategory}
+                     >
+                         19. JANUAR 2024
+                     </p>
+                 </div>
+                 <h3 class={cardHeading}> 1.1   DXF Import veröffentlicht </h3>
+
+                 <p class={cardCategory}>
+                     Das SIM-VICUS Team wünscht ein spannendes und erfolgreiches neus Jahr! Auch in der SIM-VICUS Welt wird es in diesem Jahr…
+                 </p>
+             </div>
+         </a>
+     </div>
 
  </div>
 
