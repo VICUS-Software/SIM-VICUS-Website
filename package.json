@@ -21,6 +21,7 @@
     "@vanilla-extract/dynamic": "^2.1.1",
     "astro": "^4.9.1",
     "solid-js": "^1.8.17",
+    "turbo": "^1.13.3",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
