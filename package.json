@@ -1,31 +1,26 @@
 {
-  "name": "sime-vicus-homepage",
+  "name": "example-basic",
   "type": "module",
-  "homepage": "https://sime-vicus-homepage.github.io",
-  "version": "0.0.1",
   "scripts": {
-    "dev": " GITHUBPAGES=false astro dev",
-    "start": "astro dev",
-    "build": "GITHUBPAGES=true astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "version": "vinxi version"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.10",
-    "@astrojs/solid-js": "^4.2.0",
-    "@kobalte/core": "^0.13.1",
-    "@macaron-css/core": "^1.5.2",
-    "@macaron-css/solid": "^1.5.3",
-    "@macaron-css/vite": "^1.5.1",
+    "@kobalte/core": "^0.13.3",
+    "@solidjs/meta": "^0.29.4",
+    "@solidjs/router": "^0.13.3",
+    "@solidjs/start": "^1.0.1",
     "@vanilla-extract/css": "^1.15.2",
     "@vanilla-extract/dynamic": "^2.1.1",
-    "astro": "^4.9.1",
     "solid-js": "^1.8.17",
-    "turbo": "^1.13.3",
-    "typescript": "^5.4.5"
+    "vinxi": "^0.3.11"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.7.2",
     "@vanilla-extract/vite-plugin": "^4.0.10"
   }
 }

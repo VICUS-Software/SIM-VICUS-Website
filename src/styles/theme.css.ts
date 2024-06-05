@@ -1,6 +1,14 @@
-import {createTheme, createThemeContract} from "@vanilla-extract/css";
-import {black,bold,ultraBlack,ultraLight,medium,thin,light,regular} from "./font/font.css.ts";
-
+import {
+    black,
+    bold,
+    light,
+    medium,
+    regular,
+    thin,
+    ultraBlack,
+    ultraLight,
+} from "./font/font.css.ts";
+import { createTheme, createThemeContract } from "@vanilla-extract/css";
 
 const vars = createThemeContract({
     color: {
@@ -10,7 +18,7 @@ const vars = createThemeContract({
         link: "",
         heading: "",
         borderPrimary: "",
-        secondary:""
+        secondary: "",
     },
     spacing: {
         dynamic: {
@@ -27,18 +35,18 @@ const vars = createThemeContract({
     fontFamily: {
         heading: "",
         link: "",
-        paragraph:"",
+        paragraph: "",
         text: "",
         bold: "",
-        light:"",
-        ultraBlack:"",
+        light: "",
+        ultraBlack: "",
         ultraLight: "",
     },
     fontSize: {
         small: "",
         medium: "",
         large: "",
-        heading:"",
+        heading: "",
     },
     border: {
         borderRadius: {
@@ -48,7 +56,7 @@ const vars = createThemeContract({
                 large: "",
             },
             round: {
-                full:"",
+                full: "",
                 half: "",
                 quarter: "",
             },
@@ -66,11 +74,10 @@ const vars = createThemeContract({
     boxShadow: {
         subtile: "",
         medium: "",
-        strong:"",
+        strong: "",
         glow: "",
     },
 });
-
 
 export const darkTheme = createTheme(vars, {
     color: {
@@ -80,7 +87,7 @@ export const darkTheme = createTheme(vars, {
         heading: "#00B7FF",
         link: "#00B7FF",
         borderPrimary: "rgb(255, 255, 255,0.5)",
-        secondary :"#FFB618"
+        secondary: "#FFB618",
     },
     spacing: {
         dynamic: {
@@ -103,13 +110,12 @@ export const darkTheme = createTheme(vars, {
         light: light,
         ultraBlack: ultraBlack,
         ultraLight: ultraLight,
-
     },
     fontSize: {
         small: "0.75rem",
         medium: "1rem",
         large: "2rem",
-        heading:"4rem",
+        heading: "4rem",
     },
     border: {
         borderRadius: {
@@ -139,11 +145,10 @@ export const darkTheme = createTheme(vars, {
     backgroundColor: {
         primary: "black",
         surface: "rgb(54, 62, 68,0.3)",
-    }
-
+    },
 });
 
-export const lightTheme = createTheme(vars , {
+export const lightTheme = createTheme(vars, {
     color: {
         primary: "#FFFFFF",
         surface: "#0A005A",
@@ -151,7 +156,7 @@ export const lightTheme = createTheme(vars , {
         heading: "#00B7FF",
         link: "#00B7FF",
         borderPrimary: "rgb(255, 255, 255,0.5)",
-        secondary: ""
+        secondary: "",
     },
     spacing: {
         dynamic: {
@@ -174,13 +179,12 @@ export const lightTheme = createTheme(vars , {
         light: light,
         ultraBlack: ultraBlack,
         ultraLight: ultraLight,
-
     },
     fontSize: {
         small: "0.5rem",
         medium: "1rem",
         large: "2rem",
-        heading:"4rem",
+        heading: "4rem",
     },
     border: {
         borderRadius: {
@@ -210,8 +214,7 @@ export const lightTheme = createTheme(vars , {
     backgroundColor: {
         primary: "white",
         surface: "#ADB8BD",
-    }
+    },
 });
 
-
-export {vars};
+export { vars };

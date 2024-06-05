@@ -1,5 +1,5 @@
-import { globalStyle, style } from "@vanilla-extract/css"
-import {vars} from "../../../../../styles/theme.css.ts";
+import { vars } from "../../../../../styles/theme.css.ts";
+import { globalStyle, style } from "@vanilla-extract/css";
 
 export const card = style({
     listStyle: "none",
@@ -25,35 +25,32 @@ export const cardContent = style({
     position: "absolute",
     top: "0",
     color: vars.color.text,
-    fontFamily:vars.fontFamily.text
+    fontFamily: vars.fontFamily.text,
 });
 
 export const cardHeading = style({
     color: vars.color.text,
-    fontFamily:vars.fontFamily.heading,
+    fontFamily: vars.fontFamily.heading,
     fontSize: "1.3rem",
     textShadow: "2px 2px 20px rgba(0,0,0,0.2)",
     lineHeight: "1.4",
     wordSpacing: "100vw",
 });
 
-
-
 export const cardGrid = style({
     display: "grid",
     gridTemplateColumns: "repeat(1,1fr)",
-    gap:"1rem",
+    gap: "1rem",
     maxWidth: "var(--width-container)",
     width: "100%",
     "@media": {
         "(min-width: 540px)": {
             gridTemplateColumns: "repeat(2,1fr)",
-
         },
         "(min-width: 960px)": {
             gridTemplateColumns: "repeat(4,1fr)",
         },
-    }
+    },
 });
 
 export const cardBackground = style({
@@ -67,9 +64,9 @@ export const cardBackground = style({
     right: "0",
     top: "0",
     transformOrigin: "center",
-    transform:"scale(1) translateZ(0)",
+    transform: "scale(1) translateZ(0)",
     transition: "filter 200ms linear , transform 200ms linear",
-    "selectors": {
+    selectors: {
         [`${cardGrid}:hover > ${card}:not(:hover) &`]: {
             filter: "brightness(0.5) saturate(0) contrast(1.2) blur(20px)",
         },
@@ -79,9 +76,8 @@ export const cardBackground = style({
     },
 });
 
-
 globalStyle(":root", {
-    "vars": {
+    vars: {
         "--background-dark": "#2d3548",
         "--text-light": "rgba 255 ,   255 ,   255 ,   0.6 )",
         "--text-lighter": "rgba 255 ,   255 ,   255 ,   0.9 )",
