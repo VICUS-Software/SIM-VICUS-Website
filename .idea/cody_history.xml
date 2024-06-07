@@ -266,6 +266,34 @@
           </enhancedContext>
           <internalId value="9099fb77-6fe6-4b19-bc15-e26b3c3df495" />
         </chat>
+        <chat>
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/vicus-software/sim-vicus-website" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="f8c66540-0def-494f-abbf-1d99751e151d" />
+        </chat>
+        <chat>
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/vicus-software/sim-vicus-website" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="6826cfed-28fd-42f7-b239-7371d26ca47e" />
+        </chat>
       </list>
     </chats>
     <defaultEnhancedContext>

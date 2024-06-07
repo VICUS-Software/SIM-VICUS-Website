@@ -11,6 +11,12 @@ importers:
       '@kobalte/core':
         specifier: ^0.13.3
         version: 0.13.3(solid-js@1.8.17)
+      '@solid-primitives/active-element':
+        specifier: ^2.0.20
+        version: 2.0.20(solid-js@1.8.17)
+      '@solid-primitives/scroll':
+        specifier: ^2.0.23
+        version: 2.0.23(solid-js@1.8.17)
       '@solidjs/meta':
         specifier: ^0.29.4
         version: 0.29.4(solid-js@1.8.17)
@@ -856,6 +862,11 @@ packages:
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
 
+  '@solid-primitives/active-element@2.0.20':
+    resolution: {integrity: sha512-5EEJZ7F9DwzHMqXVTsgfE9egzeN9PhUgEkb3+RCC3FPEiLqLUc6HN+OlEjPqBxWEzsB1H/q7CfYDAJUab4N1EA==}
+    peerDependencies:
+      solid-js: ^1.6.12
+
   '@solid-primitives/event-listener@2.3.3':
     resolution: {integrity: sha512-DAJbl+F0wrFW2xmcV8dKMBhk9QLVLuBSW+TR4JmIfTaObxd13PuL7nqaXnaYKDWOYa6otB00qcCUIGbuIhSUgQ==}
     peerDependencies:
@@ -888,6 +899,11 @@ packages:
 
   '@solid-primitives/rootless@1.4.5':
     resolution: {integrity: sha512-GFJE9GC3ojx0aUKqAUZmQPyU8fOVMtnVNrkdk2yS4kd17WqVSpXpoTmo9CnOwA+PG7FTzdIkogvfLQSLs4lrww==}
+    peerDependencies:
+      solid-js: ^1.6.12
+
+  '@solid-primitives/scroll@2.0.23':
+    resolution: {integrity: sha512-kO0YpXKEUHaAnHp3zIsHYmxxuKXO3/LxVhZQHHmhqsmUY6A5IBObkSkoQ/ChIPl/WMKE7ynxEq40OgRmhvyUSw==}
     peerDependencies:
       solid-js: ^1.6.12
 
@@ -3424,6 +3440,12 @@ snapshots:
 
   '@sindresorhus/merge-streams@2.3.0': {}
 
+  '@solid-primitives/active-element@2.0.20(solid-js@1.8.17)':
+    dependencies:
+      '@solid-primitives/event-listener': 2.3.3(solid-js@1.8.17)
+      '@solid-primitives/utils': 6.2.3(solid-js@1.8.17)
+      solid-js: 1.8.17
+
   '@solid-primitives/event-listener@2.3.3(solid-js@1.8.17)':
     dependencies:
       '@solid-primitives/utils': 6.2.3(solid-js@1.8.17)
@@ -3459,6 +3481,13 @@ snapshots:
   '@solid-primitives/rootless@1.4.5(solid-js@1.8.17)':
     dependencies:
       '@solid-primitives/utils': 6.2.3(solid-js@1.8.17)
+      solid-js: 1.8.17
+
+  '@solid-primitives/scroll@2.0.23(solid-js@1.8.17)':
+    dependencies:
+      '@solid-primitives/event-listener': 2.3.3(solid-js@1.8.17)
+      '@solid-primitives/rootless': 1.4.5(solid-js@1.8.17)
+      '@solid-primitives/static-store': 0.0.8(solid-js@1.8.17)
       solid-js: 1.8.17
 
   '@solid-primitives/static-store@0.0.8(solid-js@1.8.17)':
