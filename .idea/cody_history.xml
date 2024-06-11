@@ -294,6 +294,20 @@
           </enhancedContext>
           <internalId value="6826cfed-28fd-42f7-b239-7371d26ca47e" />
         </chat>
+        <chat>
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/vicus-software/sim-vicus-website" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="a1a5e41f-2e41-4678-853c-3cfd704bd306" />
+        </chat>
       </list>
     </chats>
     <defaultEnhancedContext>

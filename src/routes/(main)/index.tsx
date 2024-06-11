@@ -92,6 +92,13 @@ export default function Home() {
           </div>
 
           <div class={next_section}>
+              <img style={{
+                  width: "98%",
+                  height:"100%",
+                  "z-index":1,
+                  position:"absolute",
+                  opacity:0.7
+              }} src={"/Gotham.jpeg"}/>
               <NewsBanner />
           </div>
       </>

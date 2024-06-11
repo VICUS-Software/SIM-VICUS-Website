@@ -1,6 +1,6 @@
 import { vars } from "../../../../../styles/theme.css.ts";
 import {keyframes, style} from "@vanilla-extract/css";
-const web_kit_slide_in =keyframes( {
+const web_kit_slide_in_left =keyframes( {
     "from": {
         opacity: "0",
         WebkitTransform: "translate(-100%)",
@@ -12,7 +12,7 @@ const web_kit_slide_in =keyframes( {
     },
 });
 
-const slide_in = keyframes( {
+const slide_in_left = keyframes( {
     "from": {
         opacity: "0",
         WebkitTransform: "translate(-100%)",
@@ -22,13 +22,54 @@ const slide_in = keyframes( {
         opacity: "1",
     },
 });
-export const feature_container = style({
-    display: "grid",
-    gridTemplateRows: "1fr",
-    gridTemplateColumns: "1.5fr 1fr 1fr",
-    gap: "1rem",
+
+const web_kit_slide_in_right =keyframes( {
+    "from": {
+        opacity: "0",
+        WebkitTransform: "translate(100%)",
+        transform: "translate(100%)",
+        background: "transparent",
+    },
+    "to": {
+        opacity: "1",
+    },
 });
 
+const slide_in_right = keyframes( {
+    "from": {
+        opacity: "0",
+        WebkitTransform: "translate(100%)",
+        transform: "translate(100%)",
+    },
+    "to": {
+        opacity: "1",
+    },
+});
+export const feature_container = style({
+    display: "flex",
+   flexDirection:"column",
+    gap: "1rem",
+    backgroundImage: `linear-gradient(to right, ${vars.backgroundColor.surface} 1px, transparent 1px),
+    linear-gradient(to bottom, ${vars.backgroundColor.surface} 1px, transparent 1px)`,
+    backgroundSize: "24px 24px",
+    opacity:1
+
+});
+
+export const svg_container=style({
+    display:"grid",
+    gridTemplateColumns: "1.5fr 1fr",
+    gridTemplateRows:"1fr",
+    gap: "1rem",
+
+})
+export const text_container=style({
+    display: "grid",
+    gridTemplateColumns: "1fr 1.2fr",
+    gridTemplateRows:"1fr",
+    gap: "1rem",
+
+})
 export const svg = style({
     stroke: vars.color.secondary,
     width: "49%",
@@ -38,8 +79,8 @@ export const svg = style({
     strokeWidth: 0.1,
    opacity:1,
     marginLeft: "auto",
-    WebkitAnimation: `${web_kit_slide_in} 1s ease-out`,
-    animation: `${slide_in} 1s ease-out`,
+    WebkitAnimation: `${web_kit_slide_in_left} 1s ease-out`,
+    animation: `${slide_in_left} 1s ease-out`,
 });
 
 export const placeHolder = style({
@@ -51,21 +92,20 @@ export const placeHolder = style({
 })
 
 export const mid = style({
-    border: "1px solid red",
     display: "grid",
     alignItems: "center",
-
+    width:"70%"
 });
 
 export const right =  style({
-    border: "1px solid red",
+
     display: "grid",
     alignItems: "center",
 
 });
 
 export const left =  style({
-    border: "1px solid red",
+
     display: "grid",
     alignItems: "center",
 
@@ -79,7 +119,9 @@ export const text = style({
     textAlign:"center",
     textWrap:"wrap",
     textIndent:"2rem",
-    padding:"1rem"
+    padding:"1rem",
+    WebkitAnimation: `${web_kit_slide_in_right} 1s ease-out`,
+    animation: `${slide_in_right} 1s ease-out`,
 
 
 });
@@ -90,16 +132,20 @@ export const heading = style({
     color:vars.color.heading,
     marginLeft:"auto",
     marginRight:"auto",
-    textAlign:"center"
+    textAlign:"center",
+    WebkitAnimation: `${web_kit_slide_in_right} 1s ease-out`,
+    animation: `${slide_in_right} 1s ease-out`,
+
 })
 
-
-
-
-
-export const slideIn = style({
-    WebkitAnimation: `${web_kit_slide_in} 1s ease-out`,
-    animation: `${slide_in} 1s ease-out`,
+export const graph_background = style({
+    zIndex: 29,
+    inset: "0",
+    height: "100%",
+    width: "100%",
+    backgroundImage: `linear-gradient(to right, #80808012 1px, transparent 1px),
+    linear-gradient(to bottom, #80808012 1px, transparent 1px)`,
+    backgroundSize: "24px 24px",
+    opacity: 1,
 });
-
 

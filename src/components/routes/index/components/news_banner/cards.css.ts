@@ -39,6 +39,7 @@ export const cardHeading = style({
 
 export const cardGrid = style({
     display: "grid",
+    zIndex: 30,
     gridTemplateColumns: "repeat(1,1fr)",
     gap: "1rem",
     maxWidth: "var(--width-container)",

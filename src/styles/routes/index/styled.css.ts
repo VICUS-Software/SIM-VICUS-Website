@@ -165,8 +165,10 @@ export const background_wrapper = style({
     display:"grid",
     gridTemplateColumns:"1fr",
     gridTemplateRows: "1fr",
+    gap:"1rem",
     gridTemplateAreas: `"mac"
                         "bottom"
+                                         
     `
 })
 
