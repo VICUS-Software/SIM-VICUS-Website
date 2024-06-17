@@ -3,7 +3,7 @@ import {Macbook} from "~/components/routes/index/components/macbook/Macbook.tsx"
 import {
     background_wrapper,
     customer_banner_wrapper,
-    index_page_wrapper, next_section,
+    index_page_wrapper, next_section, next_section_news,
     space, stone_space, stone_space_bottom, stone_space_top, stone_wall
 } from "../../styles/routes/index/styled.css.ts";
 import {IntroHeader} from "~/components/routes/index/components/text_banner/IntroHeader.tsx";
@@ -91,16 +91,12 @@ export default function Home() {
               <Features />
           </div>
 
-          <div class={next_section}>
-              <img style={{
-                  width: "98%",
-                  height:"100%",
-                  "z-index":1,
-                  position:"absolute",
-                  opacity:0.7
-              }} src={"/Gotham.jpeg"}/>
+          <div class={next_section_news}>
               <NewsBanner />
           </div>
+          <div class={next_section}>
+          </div>
+
       </>
   );
 }

@@ -4,7 +4,6 @@ import { style } from "@vanilla-extract/css";
 
 export const  news_container = style({
     marginTop:"10rem",
-    zIndex:30
 })
 export const card_wrapper = style({
     display: "flex",
@@ -18,7 +17,7 @@ export const card_wrapper = style({
 });
 
 export const heading = style({
-    zIndex:39,
+    zIndex:30,
     color: vars.color.heading,
     fontFamily: vars.fontFamily.heading,
     textAlign: "center",

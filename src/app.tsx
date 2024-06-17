@@ -4,6 +4,7 @@ import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
 
 import "./styles/global.css";
+import "./styles/viewtransition.css"
 export default function App() {
   return (
     <Router

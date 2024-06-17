@@ -4,6 +4,7 @@ import { globalStyle, style } from "@vanilla-extract/css";
 export const card = style({
     listStyle: "none",
     position: "relative",
+    width:"400px",
     ":before": {
         content: "",
         display: "block",
@@ -13,9 +14,9 @@ export const card = style({
 });
 
 export const cardCategory = style({
-    color: "var(--text-light)",
+    color: vars.color.text,
     fontSize: "0.9rem",
-    marginBottom: "var(--spacing-s)",
+    marginBottom: "1rem",
     textTransform: "uppercase",
 });
 
@@ -38,32 +39,26 @@ export const cardHeading = style({
 });
 
 export const cardGrid = style({
-    display: "grid",
-    zIndex: 30,
-    gridTemplateColumns: "repeat(1,1fr)",
-    gap: "1rem",
-    maxWidth: "var(--width-container)",
-    width: "100%",
-    "@media": {
-        "(min-width: 540px)": {
-            gridTemplateColumns: "repeat(2,1fr)",
-        },
-        "(min-width: 960px)": {
-            gridTemplateColumns: "repeat(4,1fr)",
-        },
-    },
+    display:"flex",
+    flexDirection:"row",
+    flexWrap:"wrap",
+    gap: "3rem",
+    placeContent:"center",
+
+
 });
 
 export const cardBackground = style({
     backgroundSize: "cover",
     backgroundPosition: "center",
-    borderRadius: "var(--spacing-l)",
+    borderRadius: "50px",
     bottom: "0",
-    filter: "brightness(0.75) saturate(1.2) contrast(0.85)",
+    filter: "brightness(0.5) saturate(1.2) contrast(0.85)",
     left: "0",
     position: "absolute",
     right: "0",
     top: "0",
+    viewTransitionName:"import_image",
     transformOrigin: "center",
     transform: "scale(1) translateZ(0)",
     transition: "filter 200ms linear , transform 200ms linear",
@@ -77,16 +72,3 @@ export const cardBackground = style({
     },
 });
 
-globalStyle(":root", {
-    vars: {
-        "--background-dark": "#2d3548",
-        "--text-light": "rgba 255 ,   255 ,   255 ,   0.6 )",
-        "--text-lighter": "rgba 255 ,   255 ,   255 ,   0.9 )",
-        "--spacing-s": "8px",
-        "--spacing-m": "16px",
-        "--spacing-l": "24px",
-        "--spacing-xl": "32px",
-        "--spacing-xxl": "64px",
-        "--width-container": "1200px",
-    },
-});

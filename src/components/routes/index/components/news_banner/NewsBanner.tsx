@@ -17,8 +17,9 @@ export const NewsBanner: Component = () => {
         <>
             <div class={news_container}>
             <h1 class={heading}>Neuigkeiten über SIM-VICUS</h1>
-            <div class={card_wrapper}>
+
                 <div class={cardGrid}>
+
                     <a class={card} href="#">
                         <div
                             class={cardBackground}
@@ -46,7 +47,7 @@ export const NewsBanner: Component = () => {
                             </p>
                         </div>
                     </a>
-                    <a class={card} href="#">
+                    <a class={card} href="/news/import">
                         <div
                             class={cardBackground}
                             style="background-image: url(/news/import/card.webp)"
@@ -188,7 +189,7 @@ export const NewsBanner: Component = () => {
                     </a>
                 </div>
             </div>
-            </div>
+
         </>
     );
 };

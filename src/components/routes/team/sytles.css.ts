@@ -1,4 +1,9 @@
-import { globalStyle, style } from "@vanilla-extract/css";
+import {createVar, fallbackVar, style} from "@vanilla-extract/css";
+import {vars} from "../../../styles/theme.css.ts";
+
+
+export  const imageUrl = createVar()
+
 
 export const border = style({
     height: "369px",
@@ -12,10 +17,13 @@ export const border = style({
     },
 });
 
+
+
 export const card = style({
     height: "379px",
     width: "300px",
-    background: "#808080",
+    background: `center center no-repeat`,
+    backgroundSize: "300px",
     borderRadius: "10px",
     transition: "background 0.8s",
     overflow: "hidden",
@@ -24,49 +32,38 @@ export const card = style({
     justifyContent: "center",
     alignItems: "center",
     position: "relative",
-});
-
-export const card0 = style({
-    background:
-        "url(https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg) center center no-repeat",
-    backgroundSize: "300px",
-    ":hover": {
-        background:
-            "url(https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg) left center no-repeat",
+    ":hover":{
+        background: `left center no-repeat`,
         backgroundSize: "600px",
-    },
-    ":hover h2": {
-        opacity: "1",
-    },
+    }
 });
+export const card_h2 = style({
+    fontFamily: vars.fontFamily.light,
+    color:vars.color.primary,
+    margin: "20px",
+    opacity: "0",
+    transition: "opacity 1s",
+    selectors: {
+        [`${card}:hover &`]: {
+          opacity:1
+        }
+    }
+})
 
-export const card1 = style({
-    background:
-        "url(https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg) center center no-repeat",
-    backgroundSize: "300px",
-    ":hover": {
-        background:
-            "url(https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg) left center no-repeat",
-        backgroundSize: "600px",
-    },
-    ":hover h2": {
-        opacity: "1",
-    },
-});
+export const card_p = style({
+    fontFamily: vars.fontFamily.light,
+    color:vars.color.primary,
+    margin: "20px",
+    opacity: "0",
+    transition: "opacity 1s",
+    selectors: {
+        [`${card}:hover &`]: {
+            opacity:1
+        }
+    }
+})
 
-export const card2 = style({
-    background:
-        "url(https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg) center center no-repeat",
-    backgroundSize: "300px",
-    ":hover": {
-        background:
-            "url(https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg) left center no-repeat",
-        backgroundSize: "600px",
-    },
-    ":hover h2": {
-        opacity: "1",
-    },
-});
+
 
 export const container = style({
     height: "100vh",
@@ -98,22 +95,9 @@ export const fa = style({
     opacity: "0",
     transition: "opacity 1s",
     selectors: {
-        [`${card0}:hover &`]: {
-            opacity: "1",
-        },
-        [`${card1}:hover &`]: {
-            opacity: "1",
-        },
-        [`${card2}:hover &`]: {
+        [`${card}:hover &`]: {
             opacity: "1",
         },
     },
 });
 
-globalStyle("h2", {
-    fontFamily: "Helvetica Neue , Helvetica , Arial , sans-serif",
-    color: "#fff",
-    margin: "20px",
-    opacity: "0",
-    transition: "opacity 1s",
-});
