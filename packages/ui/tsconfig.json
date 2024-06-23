@@ -1,0 +1,15 @@
+{
+  "extends": "@repo/typescript-config/vite.json",
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
+  }
+}

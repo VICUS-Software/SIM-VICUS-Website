@@ -1,32 +1,33 @@
-# SolidStart
+# `Turborepo` Vite starter
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+This is an official starter Turborepo.
 
-## Creating a project
+## Using this example
 
-```bash
-# create a new project in the current directory
-npm init solid@latest
+Run the following command:
 
-# create a new project in my-app
-npm init solid@latest my-app
+```sh
+npx create-turbo@latest -e with-vite
 ```
 
-## Developing
+## What's inside?
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+This Turborepo includes the following packages and apps:
 
-```bash
-npm run dev
+### Apps and Packages
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- `docs`: a vanilla [vite](https://vitejs.dev) ts app
+- `web`: another vanilla [vite](https://vitejs.dev) ts app
+- `@repo/ui`: a stub component & utility library shared by both `web` and `docs` applications
+- `@repo/eslint-config`: shared `eslint` configurations
+- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
-## Building
+Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
 
-Solid apps are built with _presets_, which optimise your project for deployment to different environments.
+### Utilities
 
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
+This Turborepo has some additional tools already setup for you:
 
-## This project was created with the [Solid CLI](https://solid-cli.netlify.app)
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting

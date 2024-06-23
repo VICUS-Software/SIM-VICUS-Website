@@ -392,6 +392,62 @@
           </enhancedContext>
           <internalId value="9ddb35a3-db97-4b50-a33b-ab35cf870616" />
         </chat>
+        <chat>
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/vicus-software/sim-vicus-website" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="ae3b6765-5123-4159-bf63-610d42b500bd" />
+        </chat>
+        <chat>
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/vicus-software/sim-vicus-website" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="1a457416-ba23-496e-8f29-62c7495315c3" />
+        </chat>
+        <chat>
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/vicus-software/sim-vicus-website" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="a5bdf206-5d2a-4a05-b919-32f5f526e665" />
+        </chat>
+        <chat>
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/vicus-software/sim-vicus-website" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="b86adbcd-ba0b-4ea7-8b63-7f642e70cd60" />
+        </chat>
       </list>
     </chats>
     <defaultEnhancedContext>

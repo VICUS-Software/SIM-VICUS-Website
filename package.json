@@ -1,29 +1,19 @@
 {
-  "name": "example-basic",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start",
-    "version": "vinxi version"
-  },
-  "dependencies": {
-    "@kobalte/core": "^0.13.3",
-    "@solid-primitives/active-element": "^2.0.20",
-    "@solid-primitives/scroll": "^2.0.23",
-    "@solidjs/meta": "^0.29.4",
-    "@solidjs/router": "^0.13.5",
-    "@solidjs/start": "^1.0.1",
-    "@vanilla-extract/css": "^1.15.3",
-    "@vanilla-extract/css-utils": "^0.1.4",
-    "@vanilla-extract/dynamic": "^2.1.1",
-    "solid-js": "^1.8.17",
-    "vinxi": "^0.3.11"
-  },
-  "engines": {
-    "node": ">=18"
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@vanilla-extract/vite-plugin": "^4.0.11"
-  }
+    "@repo/eslint-config": "workspace:*",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "turbo": "^2.0.4",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@9.1.2",
+  "name": "with-vite",
+  "type": "module"
 }
