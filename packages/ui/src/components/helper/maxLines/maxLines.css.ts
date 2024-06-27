@@ -34,6 +34,7 @@ const lineClampSupportsQuery =
     "(display: -webkit-box) and (-webkit-line-clamp: 1)";
 export const multiLine = style({
     // Can drop supports query when Edge 16 is removed from browser support policy
+    base
     "@supports": {
         [lineClampSupportsQuery]: {
             whiteSpace: "initial",

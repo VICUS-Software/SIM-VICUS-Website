@@ -1,4 +1,4 @@
-import { createContext, useContext } from "solid-js";
+import { createContext, ParentComponent, useContext } from "solid-js";
 import type { BoxBackgroundVariant } from "../Box.tsx";
 import { useBraidTheme } from "../../../theme/BraidThemeContext.ts";
 import { mapColorModeValue } from "../../../../styles/atoms/sprinkles.css.ts";
@@ -13,7 +13,18 @@ const backgroundContext = createContext<BackgroundContextValue>({
     darkMode: "bodyDark",
 });
 
-export const BackgroundProvider = backgroundContext.Provider;
+export const BackgroundProvider: ParentComponent<BackgroundContextValue> = (
+    props
+) => {
+    return (
+        <backgroundContext.Provider
+            value={{
+                lightMode: props.lightMode,
+                darkMode: props.darkMode,
+            }}
+        ></backgroundContext.Provider>
+    );
+};
 
 export const useBackground = () => useContext(backgroundContext);
 

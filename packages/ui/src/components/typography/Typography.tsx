@@ -1,64 +1,40 @@
-import { type BoxProps, Box } from "../../Box/Box";
+import { type BoxProps, Box } from "../layout/box/Box.tsx";
 import buildDataAttributes, {
     type DataAttributeMap,
-} from "../buildDataAttributes";
-import { MaxLines } from "../MaxLines/MaxLines";
-import type { UseIconProps } from "../../../hooks/useIcon";
-import { alignToFlexAlign } from "../../../utils/align";
-import dedent from "dedent";
-import { descenderCropFixForWebkitBox } from "../MaxLines/MaxLines.css";
+} from "../helper/buildDataAtributes.ts";
+import type { UseIconProps } from "../../hooks/useIcons/index.ts";
+import { alignToFlexAlign } from "../../utils/align.ts";
+import { descenderCropFixForWebkitBox } from "../helper/maxLines/maxLines.css.ts";
+import { type Component, ParentComponent, Show } from "solid-js";
+import { Truncate } from "./components/Truncate.js";
 
 export interface TypographyProps extends Pick<BoxProps, "id" | "component"> {
-    children?: ReactNode;
-    icon?: ReactElement<UseIconProps>;
+    icon?: Component<UseIconProps>;
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     align?: BoxProps["textAlign"];
-    /** @deprecated Use `maxLines={1}` instead. */
-    truncate?: boolean;
     maxLines?: number;
     data?: DataAttributeMap;
 }
 
 interface PrivateTypographyProps
     extends TypographyProps,
-        Pick<BoxProps, "className"> {}
+        Pick<BoxProps, "class"> {}
 
-export const Typography = ({
-    id,
-    component = "span",
-    className,
-    align,
-    truncate = false,
-    maxLines,
-    icon,
-    data,
-    children,
-    ...restProps
-}: PrivateTypographyProps) => {
-    const lines = truncate ? 1 : maxLines;
-    const isTruncated = typeof lines === "number";
-    const contents = isTruncated ? (
-        <MaxLines lines={lines}>{children}</MaxLines>
-    ) : (
-        children
-    );
+export const Typography: ParentComponent<PrivateTypographyProps> = (props) => {
+    const {
+        id,
+        component = "span",
+        class: className,
+        align,
+        maxLines,
+        icon,
+        data,
+        children,
+        ...restProps
+    } = props;
 
-    if (process.env.NODE_ENV !== "production") {
-        if (truncate) {
-            // eslint-disable-next-line no-console
-            console.warn(
-                dedent`
-          The "truncate" prop has been deprecated and will be removed in a future version. Use "maxLines" instead.
-             <Text
-            %c-   truncate
-            %c+   maxLines={1}
-             %c/>
-        `,
-                "color: red",
-                "color: green",
-                "color: inherit"
-            );
-        }
-    }
+    const isTruncated = maxLines === 1;
 
     return (
         <Box
@@ -66,13 +42,20 @@ export const Typography = ({
             display="block"
             component={component}
             textAlign={align}
-            className={[
+            class={[
                 className,
                 isTruncated ? descenderCropFixForWebkitBox : undefined,
             ]}
             {...buildDataAttributes({ data, validateRestProps: restProps })}
         >
-            {icon ? (
+            <Show
+                when={icon}
+                fallback={
+                    <Truncate isTruncate={isTruncated}>
+                        {props.children}
+                    </Truncate>
+                }
+            >
                 <Box
                     component="span"
                     display="flex"
@@ -90,12 +73,10 @@ export const Typography = ({
                         {icon}
                     </Box>
                     <Box component="span" display="block" minWidth={0}>
-                        {contents}
+                        <Truncate isTruncate={isTruncated}>{children}</Truncate>
                     </Box>
                 </Box>
-            ) : (
-                contents
-            )}
+            </Show>
         </Box>
     );
 };
